@@ -1,0 +1,51 @@
+.class_top {
+  margin-bottom: 30px; overflow: hidden; 
+  .class_left { float: left; width: calc(100% - 330px); height: 400px; margin-right: 30px; background: #eee; }
+  .class_right {
+    float: left; background: #fff;
+    & > div { 
+      @include position(fixed, $top: 100px); width: 300px; height: 400px; overflow: hidden; /* border: $border; @include crossBrowser(border-radius, 10px); */
+      .class_btns {
+        button {
+          width: 100%; margin: 10px 0 10px; padding: 15px 0; font-weight: bold; background: $point_color; color: #fff;
+          &:hover { background: #000; }
+        }
+        ul {
+          li {
+            float: left; width: 49%; text-align: center; border: $border_light; color: $font_gray;
+            a { display: block; padding: 7px 0; font-weight: bold; }
+          }
+          li:first-child { margin-right: 2%; }
+        }
+      }      
+    }
+  }
+}
+
+.class_content {
+  width: calc(100% - 330px); height: 400px; margin-right: 30px; background: #eee;
+  .tab_menu {
+    margin-bottom: 20px; overflow: hidden; background: #fff;
+    li {
+      float: left; width: calc(100%/6); text-align: center;
+      &.active { border-bottom: 3px solid $point_color; }
+      a { display: block; padding: 15px 0; }
+    }
+  }
+}
+
+@media all and (max-width:960px){
+  
+  .inner { max-width: 100%; }
+  .class_top {
+    .class_left { float: none; width: 100%; }
+    .class_right {
+      float: none; width: 90%; margin: 0 auto;
+      div { position: static; margin-top: -70px; width: 100%; }
+    }
+  }
+
+  .class_content {
+    width: 100%;
+  }
+}

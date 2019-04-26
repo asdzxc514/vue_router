@@ -1,0 +1,51 @@
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700");
+
+/*
+* hmtl { font-size: 62.5%; }
+* body { font-size: 14px; }
+* 12px		1.2rem
+* 13px		1.3rem
+* 14px		1.4rem
+* 16px		1.6rem
+* 18px		1.8rem
+* 20px		2rem
+* 21px		2.1rem
+* 22px		2.2rem
+* 24px		2.4rem
+*/
+
+* { margin:0; padding:0; border:0; vertical-align:baseline; background:transparent; border-collapse:collapse; box-sizing: border-box; -webkit-text-size-adjust:none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, Nav, section { display: block; }
+html { font-size: 62.5%; }
+body { width:100%; height:100%; overflow-x : hidden; font-family: 'Roboto', Arial, sans-serif; font-size: $default_font_p; color: $default_color; line-height:1.5; }
+table { border-collapse:collapse; border-spacing:0; }
+input { margin:0; padding:10px; box-sizing:content-box; vertical-align:top; appearance:none; border-radius:0; border: $border; }
+button { background-color: transparent; outline: none; border: 0; cursor: pointer; }
+dd { -webkit-margin-start:0; }
+ul { -webkit-padding-start:0; list-style-position: inside;}
+ol, ul, li { list-style: none; }
+a { margin:0; padding:0; text-decoration:none; vertical-align:baseline; color:inherit; background:transparent; }
+img { max-width: 100%; height: auto; vertical-align:top; }
+b, span { font-size:inherit; color:inherit; font-weight: inherit; }
+br { line-height: inherit; }
+
+.clear {
+	*zoom: 1;
+	&:after {content:""; display:block; clear:both;}
+}
+
+.inner { position: relative; max-width: $width; margin: 0 auto; *zoom: 1;
+	&:after {content:""; display:block; clear:both;}
+}
+.container { max-width: $width; padding: 30px 0; margin: 0 auto; }
+
+@include input-placeholder { color: gray; }
+
+//
+// MEDIA QUERIES
+@media all and (max-width:767px){
+  
+  html { font-size: 54.8%; }
+  
+}
