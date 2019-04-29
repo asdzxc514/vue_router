@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import home from '@/components/home'
-import subpage from '@/components/subpage'
+import home from '@/views/home'
+import subpage from '@/views/class/subpage'
 
 Vue.use(Router)
 
